@@ -13,18 +13,43 @@ eleventyComputed:
   </div>
 </section>
 
-<section>
+<section class="section--tight">
   <div class="container">
     <ul class="qualities">
       {% for q in home.qualities %}
       <li>{{ q }}</li>
       {% endfor %}
     </ul>
+
+    <div class="photo-strip">
+      {% for photo in home.photo_strip %}
+      <a href="/gallery/">
+        <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy">
+      </a>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
-<section class="section--wine">
+<section class="section--blush">
   <div class="container">
+    <span class="eyebrow">How it works</span>
+    <h2>From "let's chat" to "I do"</h2>
+    <div class="process-steps">
+      {% for step in home.process_steps %}
+      <div class="process-step">
+        <span class="process-step__num">{{ step.number }}</span>
+        <h3>{{ step.title }}</h3>
+        <p>{{ step.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section--wine text-center">
+  <div class="container">
+    <span class="booking-note">{{ home.booking_note }}</span>
     <p class="prose prose--center" style="max-width: 760px; font-size: 1.15rem;">{{ home.closing_statement }}</p>
     <div class="text-center mt-lg">
       <a class="btn btn--outline" href="{{ home.cta_url }}">{{ home.cta_label }}</a>

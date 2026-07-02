@@ -23,5 +23,12 @@ eleventyComputed:
       </div>
       {% endfor %}
     </div>
+
+    {% if testimonials.cta_line %}
+    <div class="text-center mt-lg">
+      <p class="script" style="font-size: 1.4rem;">{{ testimonials.cta_line }}</p>
+      <a class="btn" href="{{ testimonials.cta_url }}">{{ testimonials.cta_label }}</a>
+    </div>
+    {% endif %}
   </div>
 </section>

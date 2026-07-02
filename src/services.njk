@@ -31,6 +31,23 @@ eleventyComputed:
 </div>
 {% endif %}
 
+{% if services.faq %}
+<section class="section--tight">
+  <div class="container">
+    <span class="eyebrow">Good to know</span>
+    <h2>A few questions couples ask</h2>
+    <div class="faq-list">
+      {% for item in services.faq %}
+      <div class="faq-item">
+        <h3>{{ item.question }}</h3>
+        <p>{{ item.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
 <section class="section--blue text-center">
   <div class="container">
     <p class="script" style="font-size: 1.6rem; color: var(--white);">{{ services.closing_line }}</p>

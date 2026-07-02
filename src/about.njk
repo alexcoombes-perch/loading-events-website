@@ -14,6 +14,7 @@ eleventyComputed:
         <p>{{ para }}</p>
         {% endfor %}
         <p class="script" style="font-size: 1.4rem; margin-top: var(--space-md);">{{ about.closing_line }}</p>
+        <a class="btn mt-lg" href="{{ about.cta_url }}">{{ about.cta_label }}</a>
       </div>
       <div>
         {% if about.portrait_image %}
