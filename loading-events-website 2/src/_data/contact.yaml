@@ -1,0 +1,27 @@
+page_title: "Contact | Loading Events."
+heading: "Let's Talk About Your Day"
+intro_paragraphs:
+  - "Whether you know exactly what you need or just want to talk it through, I'd love to hear from you. Fill in the form below or email directly — I'll get back to you within a couple of days."
+form_action: "https://formspree.io/f/YOUR_FORM_ID"
+form_fields:
+  - label: "Names"
+    name: "names"
+    type: "text"
+    required: true
+  - label: "Email"
+    name: "email"
+    type: "email"
+    required: true
+  - label: "Wedding Date"
+    name: "wedding_date"
+    type: "text"
+    required: false
+  - label: "Venue (if known)"
+    name: "venue"
+    type: "text"
+    required: false
+  - label: "Tell me about your day"
+    name: "message"
+    type: "textarea"
+    required: true
+submit_label: "Send Enquiry"
