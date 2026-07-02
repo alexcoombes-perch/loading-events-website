@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Loading Events.</title>
+  <meta name="description" content="Curating weddings that feel like the best party of your life.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Beau+Rivage&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="logo">Loading Events.</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          
+          <li><a href="/" >Home</a></li>
+          
+          <li><a href="/about/" aria-current="page">About</a></li>
+          
+          <li><a href="/approach/" >My Approach</a></li>
+          
+          <li><a href="/services/" >Services</a></li>
+          
+          <li><a href="/gallery/" >The Fun Stuff</a></li>
+          
+          <li><a href="/testimonials/" >Notes From My Couples</a></li>
+          
+          <li><a href="/contact/" >Contact</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section--tight">
+  <div class="container">
+    <span class="eyebrow">Get to know me</span>
+    <div class="split">
+      <div>
+        <h1>About</h1>
+        
+        <p>A love for weddings has been there for as long as I can remember.</p>
+        
+        <p>My journey into the industry began at sixteen, photographing my first wedding after studying photography. What started as a focus on imagery quickly became something much more meaningful. I&#39;ve always been drawn to people, their connections, and the quiet, in-between moments that often end up meaning the most.</p>
+        
+        <p>This naturally led into hospitality, with years spent learning how to create thoughtful guest experiences, stay calm under pressure, and bring order to the moving parts that sit behind seamless, memorable events.</p>
+        
+        <p>Today, that experience comes together through wedding coordination, creative direction, and on-the-day content creation — blending calm organisation with a considered creative eye to shape weddings that feel effortless, intentional, and full of atmosphere.</p>
+        
+        <p>Outside of weddings, my time is often spent in a pottery studio, growing wedding flowers, or by the coast. There&#39;s a love of soft light, pastel tones, and romantic detail that runs through everything, along with a slightly unhealthy obsession with sausage dogs.</p>
+        
+        <p>Travel, good food, and slow mornings are also part of what inspires everyday life.</p>
+        
+        <p>On a wedding day, it is always the in-between moments that stand out most — the glance before the ceremony, the shift in energy after the formalities, and the ease that settles once celebration takes over.</p>
+        
+        <p class="script" style="font-size: 1.4rem; margin-top: var(--space-md);">Because while detail shapes the day, it is memory that carries it forward.</p>
+      </div>
+      <div>
+        
+        <img src="/images/gallery/gallery-02.jpg" alt="Bride looking out over the reception, veil catching the light">
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="logo">Loading Events.</a>
+          <p style="margin-top: 0.6rem; max-width: 320px;">Curating weddings that feel like the best party of your life.</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/approach/">My Approach</a></li>
+            
+            <li><a href="/services/">Services</a></li>
+            
+            <li><a href="/gallery/">The Fun Stuff</a></li>
+            
+            <li><a href="/testimonials/">Notes From My Couples</a></li>
+            
+            <li><a href="/contact/">Contact</a></li>
+            
+          </ul>
+        </nav>
+        <div>
+          <p><a href="mailto:hello@loadingevents.com">hello@loadingevents.com</a></p>
+          <p><a href="https://instagram.com/loadingevents" target="_blank" rel="noopener">@loadingevents</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Loading Events. — Based in the UK, available worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      var nav = document.getElementById('siteNav');
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+---
+layout: base.njk
+permalink: /about/
+eleventyComputed:
+  page_title: "{{ about.page_title }}"
+---
+<section class="section--tight">
+  <div class="container">
+    <span class="eyebrow">Get to know me</span>
+    <div class="split">
+      <div>
+        <h1>{{ about.heading }}</h1>
+        {% for para in about.paragraphs %}
+        <p>{{ para }}</p>
+        {% endfor %}
+        <p class="script" style="font-size: 1.4rem; margin-top: var(--space-md);">{{ about.closing_line }}</p>
+      </div>
+      <div>
+        {% if about.portrait_image %}
+        <img src="{{ about.portrait_image }}" alt="{{ about.portrait_alt }}">
+        {% elif about.accent_image %}
+        <img src="{{ about.accent_image }}" alt="{{ about.accent_image_alt }}">
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

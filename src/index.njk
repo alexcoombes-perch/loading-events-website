@@ -1,0 +1,33 @@
+---
+layout: base.njk
+permalink: /
+eleventyComputed:
+  page_title: "{{ home.page_title }}"
+---
+<section class="hero" style="background-image: url('{{ home.hero_image }}');" role="img" aria-label="{{ home.hero_image_alt }}">
+  <div class="hero__content">
+    <span class="script">welcome</span>
+    <h1>{{ home.hero_heading }}</h1>
+    {{ home.hero_intro | paragraphs | safe }}
+    <a class="btn" href="{{ home.cta_url }}">{{ home.cta_label }}</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <ul class="qualities">
+      {% for q in home.qualities %}
+      <li>{{ q }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section--wine">
+  <div class="container">
+    <p class="prose prose--center" style="max-width: 760px; font-size: 1.15rem;">{{ home.closing_statement }}</p>
+    <div class="text-center mt-lg">
+      <a class="btn btn--outline" href="{{ home.cta_url }}">{{ home.cta_label }}</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+{
+  "name": "loading-events-website",
+  "version": "1.0.0",
+  "description": "Loading Events. — wedding & event coordination website",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "js-yaml": "^4.1.0"
+  }
+}

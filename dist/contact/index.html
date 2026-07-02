@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Loading Events.</title>
+  <meta name="description" content="Curating weddings that feel like the best party of your life.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=Beau+Rivage&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="/" class="logo">Loading Events.</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          
+          <li><a href="/" >Home</a></li>
+          
+          <li><a href="/about/" >About</a></li>
+          
+          <li><a href="/approach/" >My Approach</a></li>
+          
+          <li><a href="/services/" >Services</a></li>
+          
+          <li><a href="/gallery/" >The Fun Stuff</a></li>
+          
+          <li><a href="/testimonials/" >Notes From My Couples</a></li>
+          
+          <li><a href="/contact/" aria-current="page">Contact</a></li>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section--tight">
+  <div class="container">
+    <span class="eyebrow">Let's talk</span>
+    <h1>Let&#39;s Talk About Your Day</h1>
+    <div class="prose">
+      
+      <p>Whether you know exactly what you need or just want to talk it through, I&#39;d love to hear from you. Fill in the form below or email directly — I&#39;ll get back to you within a couple of days.</p>
+      
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      
+      <div class="form-field">
+        <label for="names">Names *</label>
+        
+        <input type="text" id="names" name="names" required>
+        
+      </div>
+      
+      <div class="form-field">
+        <label for="email">Email *</label>
+        
+        <input type="email" id="email" name="email" required>
+        
+      </div>
+      
+      <div class="form-field">
+        <label for="wedding_date">Wedding Date</label>
+        
+        <input type="text" id="wedding_date" name="wedding_date" >
+        
+      </div>
+      
+      <div class="form-field">
+        <label for="venue">Venue (if known)</label>
+        
+        <input type="text" id="venue" name="venue" >
+        
+      </div>
+      
+      <div class="form-field">
+        <label for="message">Tell me about your day *</label>
+        
+        <textarea id="message" name="message" required></textarea>
+        
+      </div>
+      
+      <div>
+        <button type="submit" class="btn">Send Enquiry</button>
+      </div>
+    </form>
+
+    <div class="contact-direct">
+      <p class="eyebrow">Prefer email?</p>
+      <p><a href="mailto:hello@loadingevents.com">hello@loadingevents.com</a></p>
+      <p><a href="https://instagram.com/loadingevents" target="_blank" rel="noopener">@loadingevents on Instagram</a></p>
+    </div>
+  </div>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="/" class="logo">Loading Events.</a>
+          <p style="margin-top: 0.6rem; max-width: 320px;">Curating weddings that feel like the best party of your life.</p>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about/">About</a></li>
+            
+            <li><a href="/approach/">My Approach</a></li>
+            
+            <li><a href="/services/">Services</a></li>
+            
+            <li><a href="/gallery/">The Fun Stuff</a></li>
+            
+            <li><a href="/testimonials/">Notes From My Couples</a></li>
+            
+            <li><a href="/contact/">Contact</a></li>
+            
+          </ul>
+        </nav>
+        <div>
+          <p><a href="mailto:hello@loadingevents.com">hello@loadingevents.com</a></p>
+          <p><a href="https://instagram.com/loadingevents" target="_blank" rel="noopener">@loadingevents</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Loading Events. — Based in the UK, available worldwide.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function () {
+      var nav = document.getElementById('siteNav');
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('is-open');
+    });
+  </script>
+</body>
+</html>
