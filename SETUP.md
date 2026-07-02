@@ -24,17 +24,24 @@ Cloudflare Pages deploys straight from a GitHub repo, and the content editor als
 
 ## Step 2 — Connect Cloudflare Workers (10 min)
 
-Cloudflare merged "Pages" into "Workers" — you may see either name depending on when you're reading this, but the flow is the same:
+**Note on method:** Cloudflare's own "Workers Builds" (its built-in Git auto-build feature) had a persistent bug during setup where builds got stuck forever at "Initializing" and never ran — this looked like an account-side issue on Cloudflare's infrastructure, not a mistake in this repo's config. So instead, deploys are handled by a **GitHub Actions workflow** already included in this repo (`.github/workflows/deploy.yml`), which builds the site and pushes it to Cloudflare on every commit to `main`. It's just as automatic — nobody has to touch it after the one-time setup below. If Cloudflare fixes Workers Builds on their end later, you can switch back, but there's no need to.
 
-1. In the Cloudflare dashboard, go to **Workers & Pages → Create Application**.
-2. Choose **Import a repository** (sometimes shown as "Connect to Git"), select your GitHub account, authorize it, then select the `loading-events-website` repo.
-3. On the build/configure screen, set:
-   - **Build command:** `npm install && npx eleventy`
-   - **Deploy command / output directory:** `dist` (a `wrangler.jsonc` is already included in this repo pointing at `./dist`, so Cloudflare should pick this up automatically — if it offers to open a PR to add its own config file, you can decline since one's already there)
-4. Click **Save and Deploy**. First build takes a minute or two — you'll get a preview URL (`*.workers.dev` or `*.pages.dev`).
-5. Once it looks right, go to the project's **Custom domains** tab and attach her real domain (this is where "hosted on Cloudflare" comes together — DNS and hosting live in the same place).
+1. Create the Worker so it exists in your Cloudflare account:
+   - In the Cloudflare dashboard, go to **Workers & Pages → Create Application → Create Worker**.
+   - Name it `loading-events-website` (must match the `name` in `wrangler.jsonc`), and deploy the default starter — you'll overwrite it with the real site on the first automated deploy.
+2. Create a Cloudflare API token so GitHub can deploy on your behalf:
+   - Go to **My Profile → API Tokens → Create Token**.
+   - Use the **"Edit Cloudflare Workers"** template (or a custom token with `Account → Workers Scripts → Edit` permission for your account).
+   - Copy the token when it's shown — you won't be able to see it again.
+3. Add two secrets to the GitHub repo so the workflow can use that token:
+   - In GitHub, go to the repo's **Settings → Secrets and variables → Actions → New repository secret**.
+   - Add `CLOUDFLARE_API_TOKEN` — paste the token from step 2.
+   - Add `CLOUDFLARE_ACCOUNT_ID` — find this on the Cloudflare dashboard's **Workers & Pages** overview page, under "Account Details" (it's a long string of letters and numbers, not secret, just an identifier).
+4. Push any commit to `main` (or just re-save a page in Pages CMS once it's connected in Step 3) — this triggers the **Actions** tab in GitHub to run the deploy workflow automatically. First run takes a minute or two.
+5. Once it succeeds, the site is live at `loading-events-website.<your-subdomain>.workers.dev`. Go to the Worker's **Domains** tab in Cloudflare and attach her real domain (this is where "hosted on Cloudflare" comes together — DNS and hosting live in the same place).
+6. Optional cleanup: in the Worker's **Settings → Build**, if a "Git repository" connection shows there from earlier troubleshooting, click **Disconnect** — it's not being used for deploys anymore and would otherwise sit there permanently stuck.
 
-From now on, every time content changes and gets saved (see Step 3), Cloudflare rebuilds and republishes the site automatically — nobody has to touch this step again.
+From now on, every time content changes and gets saved (see Step 3), GitHub Actions rebuilds and republishes the site automatically — nobody has to touch this step again.
 
 ## Step 3 — Connect the content editor (10 min, one-time)
 
