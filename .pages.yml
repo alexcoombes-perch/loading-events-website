@@ -1,0 +1,88 @@
+content: [
+{ name: "site", label: "Site Settings", type: "file", path: "src/_data/site.yaml", fields: [
+  { name: "business_name", label: "Business Name", type: "text" },
+    { name: "tagline", label: "Tagline", type: "text" },
+      { name: "nav", label: "Navigation Menu", type: "object", list: true, fields: [
+          { name: "label", label: "Link Text", type: "text" },
+              { name: "url", label: "Link URL", type: "text" }
+                ]},
+                  { name: "contact_email", label: "Contact Email", type: "text" },
+                    { name: "instagram_handle", label: "Instagram Handle", type: "text" },
+                      { name: "instagram_url", label: "Instagram URL", type: "text" },
+                        { name: "footer_note", label: "Footer Note", type: "text" }
+                        ]},
+                        { name: "home", label: "Home Page", type: "file", path: "src/_data/home.yaml", fields: [
+                          { name: "page_title", label: "Browser Tab Title", type: "text" },
+                            { name: "hero_image", label: "Hero Photo", type: "image" },
+                              { name: "hero_image_alt", label: "Hero Photo Description", type: "text" },
+                                { name: "hero_heading", label: "Main Heading", type: "text" },
+                                  { name: "hero_intro", label: "Intro Text", type: "rich-text" },
+                                    { name: "qualities", label: "Three Short Lines", type: "text", list: true },
+                                      { name: "closing_statement", label: "Closing Statement", type: "rich-text" },
+                                        { name: "cta_label", label: "Button Text", type: "text" },
+                                          { name: "cta_url", label: "Button Link", type: "text" }
+                                          ]},
+                                          { name: "about", label: "About Page", type: "file", path: "src/_data/about.yaml", fields: [
+                                            { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                              { name: "heading", label: "Heading", type: "text" },
+                                                { name: "portrait_image", label: "Your Portrait Photo (optional)", type: "image" },
+                                                  { name: "paragraphs", label: "Story Paragraphs", type: "text", list: true },
+                                                    { name: "closing_line", label: "Closing Line", type: "text" }
+                                                    ]},
+                                                    { name: "approach", label: "My Approach Page", type: "file", path: "src/_data/approach.yaml", fields: [
+                                                      { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                                        { name: "heading", label: "Heading", type: "text" },
+                                                          { name: "intro_paragraphs", label: "Intro Paragraphs", type: "text", list: true },
+                                                            { name: "sections", label: "Sections", type: "object", list: true, fields: [
+                                                                { name: "heading", label: "Section Heading", type: "text" },
+                                                                    { name: "paragraphs", label: "Paragraphs", type: "text", list: true },
+                                                                        { name: "list_intro", label: "List Intro (optional)", type: "text" },
+                                                                            { name: "list", label: "List Items (optional)", type: "text", list: true }
+                                                                              ]},
+                                                                                { name: "closing", label: "Closing Section", type: "object", fields: [
+                                                                                    { name: "heading", label: "Heading", type: "text" },
+                                                                                        { name: "paragraphs", label: "Paragraphs", type: "text", list: true }
+                                                                                          ]}
+                                                                                          ]},
+                                                                                          { name: "services", label: "Services Page", type: "file", path: "src/_data/services.yaml", fields: [
+                                                                                            { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                                                                              { name: "heading", label: "Heading", type: "text" },
+                                                                                                { name: "intro_paragraphs", label: "Intro Paragraphs", type: "text", list: true },
+                                                                                                  { name: "services", label: "Services", type: "object", list: true, fields: [
+                                                                                                      { name: "name", label: "Service Name", type: "text" },
+                                                                                                          { name: "description", label: "Description", type: "rich-text" }
+                                                                                                            ]},
+                                                                                                              { name: "closing_line", label: "Closing Line", type: "text" },
+                                                                                                                { name: "cta_label", label: "Button Text", type: "text" },
+                                                                                                                  { name: "cta_url", label: "Button Link", type: "text" }
+                                                                                                                  ]},
+                                                                                                                  { name: "gallery", label: "The Fun Stuff (Gallery) Page", type: "file", path: "src/_data/gallery.yaml", fields: [
+                                                                                                                    { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                                                                                                      { name: "heading", label: "Heading", type: "text" },
+                                                                                                                        { name: "intro_paragraphs", label: "Intro Paragraphs", type: "text", list: true },
+                                                                                                                          { name: "closing_line", label: "Closing Line", type: "text" },
+                                                                                                                            { name: "images", label: "Photos", type: "object", list: true, fields: [
+                                                                                                                                { name: "src", label: "Photo", type: "image" },
+                                                                                                                                    { name: "alt", label: "Description (for accessibility)", type: "text" }
+                                                                                                                                      ]}
+                                                                                                                                      ]},
+                                                                                                                                      { name: "testimonials", label: "Notes From My Couples Page", type: "file", path: "src/_data/testimonials.yaml", fields: [
+                                                                                                                                        { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                                                                                                                          { name: "heading", label: "Heading", type: "text" },
+                                                                                                                                            { name: "intro_paragraphs", label: "Intro Paragraphs", type: "text", list: true },
+                                                                                                                                              { name: "testimonials", label: "Testimonials", type: "object", list: true, fields: [
+                                                                                                                                                  { name: "quote", label: "Quote", type: "rich-text" },
+                                                                                                                                                      { name: "names", label: "Couple's Names", type: "text" },
+                                                                                                                                                          { name: "date", label: "Date", type: "text" }
+                                                                                                                                                            ]}
+                                                                                                                                                            ]},
+                                                                                                                                                            { name: "contact", label: "Contact Page", type: "file", path: "src/_data/contact.yaml", fields: [
+                                                                                                                                                              { name: "page_title", label: "Browser Tab Title", type: "text" },
+                                                                                                                                                                { name: "heading", label: "Heading", type: "text" },
+                                                                                                                                                                  { name: "intro_paragraphs", label: "Intro Paragraphs", type: "text", list: true },
+                                                                                                                                                                    { name: "form_action", label: "Form Submission Link (Formspree URL)", type: "text" },
+                                                                                                                                                                      { name: "submit_label", label: "Submit Button Text", type: "text" }
+                                                                                                                                                                      ]}
+                                                                                                                                                                      ]
+media: { input: "src/images", output: "/images" }
+                                                                                                                                                                      
