@@ -1,16 +1,38 @@
 page_title: "Loading Events. | Wedding Coordination & Creative Direction"
-hero_image: "/images/hero/hero-golden-hour.jpg"
-hero_image_alt: "Couple embracing at golden hour on their wedding day"
-hero_heading: "Curating weddings that feel like the best party of your life"
+hero_image: "/images/hero/hero-first-dance.jpg"
+hero_image_alt: "A couple share their first dance under fairy lights as guests gather round"
+hero_heading: "Weddings that feel like the best party you've ever thrown"
 hero_intro: |
-  A wedding is more than a schedule or a set of details — it's an atmosphere, a feeling, and a collection of moments that stay long after the day itself.
+  You've done the hard part. You said yes, booked the venue, found the dress. Now you need someone who holds every thread of the day, so you don't have to.
 
-  The focus is on creating celebrations that feel effortless in execution and full of life in experience.
+  That's the job. Calm, capable, a bit cheeky when it helps, and completely on top of the details, so you're on the dance floor instead of checking your phone.
 qualities:
   - "Calm behind the scenes."
   - "Thoughtful in the details."
-  - "Always focused on the moments that matter most."
+  - "Genuinely fun to work with."
+booking_note: "Now booking 2027 weddings, with a handful of 2026 dates still open."
+process_steps:
+  - number: "01"
+    title: "We talk it through"
+    description: "A free, no-pressure call to hear about your day, your suppliers, and what 'good' looks like to you. No script, just a proper conversation."
+  - number: "02"
+    title: "I take the reins"
+    description: "Timelines built, suppliers briefed, details double-checked. Everything gets tighter and calmer the closer we get, not the other way round."
+  - number: "03"
+    title: "You actually enjoy your wedding"
+    description: "On the day, I'm the one fielding questions, chasing the caterer, and fixing the small wobbles, so you're fully present for every moment of it."
+photo_strip:
+  - src: "/images/gallery/ceremony-03.jpg"
+    alt: "Bride and groom exchanging vows during the ceremony"
+  - src: "/images/gallery/details-01.jpg"
+    alt: "Wedding stationery and table detail styling"
+  - src: "/images/gallery/venue-highlights-05.jpg"
+    alt: "Guests celebrating during the wedding reception"
+  - src: "/images/gallery/sneak-peek-02.jpg"
+    alt: "Candid moment between the couple"
 closing_statement: |
-  At the heart of everything, the aim is to make this feel like an easy, enjoyable experience from the very beginning of planning right through to the wedding day itself — calmly guiding things behind the scenes, while quietly keeping everything on track in the background.
+  Every wedding I take on gets the same thing: full attention, straight answers, and someone who genuinely cares whether your day goes well, not just whether the timeline holds.
+
+  If that sounds like what you're after, let's have a chat.
 cta_label: "Enquire About Your Day"
 cta_url: "/contact/"
