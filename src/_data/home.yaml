@@ -1,15 +1,13 @@
 page_title: "Loading Events. | Wedding Coordination & Creative Direction"
 hero_image: "/images/hero/hero-first-dance.jpg"
 hero_image_alt: "A couple share their first dance under fairy lights as guests gather round"
-hero_heading: "Weddings that feel like the best party you've ever thrown"
+hero_heading: "Curating weddings that feel like the best party of your life"
 hero_intro: |
-  You've done the hard part. You said yes, booked the venue, found the dress. Now you need someone who holds every thread of the day, so you don't have to.
-
-  That's the job. Calm, capable, a bit cheeky when it helps, and completely on top of the details, so you're on the dance floor instead of checking your phone.
+  A wedding is more than a schedule or a set of detail. It's an atmosphere, a feeling, and a collection of moments that stay long after the day itself.
 qualities:
   - "Calm behind the scenes."
   - "Thoughtful in the details."
-  - "Genuinely fun to work with."
+  - "Always focused on the moments that matter most."
 booking_note: "Now booking 2027 weddings, with a handful of 2026 dates still open."
 photo_strip:
   - src: "/images/gallery/ceremony-03.jpg"
@@ -25,7 +23,6 @@ photo_strip:
   - src: "/images/gallery/dinner-speeches-01.jpg"
     alt: "Speeches during the wedding breakfast"
 about_teaser:
-  eyebrow: "Behind the scenes"
   heading: "Hi, I'm the person behind Loading Events."
   paragraph: "I started photographing weddings at sixteen, then spent years in hospitality learning how to keep a room calm when everything behind it is anything but. Now I bring both together: an eye for the details that matter, and the steady hands to make sure they actually happen."
   image: "/images/gallery/sneak-peek-01.jpg"
@@ -33,9 +30,7 @@ about_teaser:
   cta_label: "More about me"
   cta_url: "/about/"
 services_teaser:
-  eyebrow: "What I offer"
-  heading: "Three ways I can help"
-  intro: "Every package starts with a conversation, not a contract."
+  intro: "Whether you're looking for support throughout the planning process, someone to take the reins on the day itself or someone just to bring some ideas together with clarity. I'm here to make wedding planning feel exciting, not overwhelming."
   items:
     - name: "Wedding Coordination"
       description: "I step in behind the scenes to manage timelines, suppliers, and last-minute curveballs, so you can just enjoy the day."
@@ -63,5 +58,5 @@ closing_statement: |
   Every wedding I take on gets the same thing: full attention, straight answers, and someone who genuinely cares whether your day goes well, not just whether the timeline holds.
 
   If that sounds like what you're after, let's have a chat.
-cta_label: "Enquire About Your Day"
+cta_label: "Let's Chat"
 cta_url: "/contact/"
