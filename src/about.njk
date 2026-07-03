@@ -7,22 +7,46 @@ eleventyComputed:
 <section class="section--tight">
   <div class="container">
     <span class="eyebrow">Get to know me</span>
-    <div class="split">
-      <div class="reveal">
+    <div class="split reveal">
+      <div>
         <h1>{{ about.heading }}</h1>
-        {% for para in about.paragraphs %}
+        {% for para in about.intro_paragraphs %}
         <p>{{ para }}</p>
         {% endfor %}
-        <p class="script" style="font-size: 1.6rem; margin-top: var(--space-md);">{{ about.closing_line }}</p>
-        <a class="btn mt-lg" href="{{ about.cta_url }}">{{ about.cta_label }}</a>
       </div>
-      <div class="reveal reveal--1">
+      <div>
         {% if about.portrait_image %}
-        <img src="{{ about.portrait_image }}" alt="{{ about.portrait_alt }}">
+        <img src="{{ about.portrait_image }}" alt="{{ about.portrait_alt }}" loading="lazy">
         {% elif about.accent_image %}
-        <img src="{{ about.accent_image }}" alt="{{ about.accent_image_alt }}">
+        <img src="{{ about.accent_image }}" alt="{{ about.accent_image_alt }}" loading="lazy">
         {% endif %}
       </div>
     </div>
+  </div>
+</section>
+
+<section class="section--blush">
+  <div class="container">
+    <div class="split reveal">
+      <img src="{{ about.second_image }}" alt="{{ about.second_image_alt }}" loading="lazy">
+      <div>
+        {% for para in about.second_paragraphs %}
+        <p>{{ para }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if about.photo_moment %}
+<section class="photo-moment section--flush" style="background-image: url('{{ about.photo_moment.image }}');" role="img" aria-label="{{ about.photo_moment.image_alt }}">
+  <p class="photo-moment__quote reveal script">{{ about.photo_moment.quote }}</p>
+</section>
+{% endif %}
+
+<section class="section--tight text-center">
+  <div class="container reveal">
+    <p class="script" style="font-size: 1.6rem;">{{ about.closing_line }}</p>
+    <a class="btn mt-lg" href="{{ about.cta_url }}">{{ about.cta_label }}</a>
   </div>
 </section>

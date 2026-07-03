@@ -18,32 +18,45 @@ eleventyComputed:
 
 {% if approach.accent_image %}
 <div class="container reveal">
-  <img src="{{ approach.accent_image }}" alt="{{ approach.accent_image_alt }}" style="border-radius: 14px; max-height: 480px; width: 100%; object-fit: cover; box-shadow: var(--shadow-soft);">
+  <img src="{{ approach.accent_image }}" alt="{{ approach.accent_image_alt }}" style="border-radius: 14px; max-height: 480px; width: 100%; object-fit: cover; box-shadow: var(--shadow-soft);" loading="lazy">
 </div>
 {% endif %}
 
-<section>
+{% for block in approach.sections %}
+<section class="{{ 'section--blush' if loop.index is even else '' }}">
   <div class="container">
-    {% for block in approach.sections %}
-    <div class="approach-block reveal reveal--{{ loop.index }}">
-      <h2>{{ block.heading }}</h2>
-      <div class="prose">
-        {% for para in block.paragraphs %}
-        <p>{{ para }}</p>
-        {% endfor %}
-        {% if block.list %}
-        <p><strong>{{ block.list_intro }}</strong></p>
-        <ul>
-          {% for item in block.list %}
-          <li>{{ item }}</li>
+    <div class="split reveal">
+      {% if loop.index is even %}
+      <img src="{{ block.image }}" alt="{{ block.image_alt }}" loading="lazy">
+      {% endif %}
+      <div class="approach-block">
+        <h2>{{ block.heading }}</h2>
+        <div class="prose">
+          {% for para in block.paragraphs %}
+          <p>{{ para }}</p>
           {% endfor %}
-        </ul>
-        {% endif %}
+          {% if block.list %}
+          <p><strong>{{ block.list_intro }}</strong></p>
+          <ul>
+            {% for item in block.list %}
+            <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
       </div>
+      {% if loop.index is odd %}
+      <img src="{{ block.image }}" alt="{{ block.image_alt }}" loading="lazy">
+      {% endif %}
     </div>
-    {% endfor %}
   </div>
 </section>
+{% if loop.index == 2 and approach.photo_moment %}
+<section class="photo-moment section--flush" style="background-image: url('{{ approach.photo_moment.image }}');" role="img" aria-label="{{ approach.photo_moment.image_alt }}">
+  <p class="photo-moment__quote reveal script">{{ approach.photo_moment.quote }}</p>
+</section>
+{% endif %}
+{% endfor %}
 
 <section class="section--wine">
   <div class="container prose--center reveal" style="max-width: 700px;">
