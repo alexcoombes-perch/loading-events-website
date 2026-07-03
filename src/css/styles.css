@@ -354,6 +354,7 @@ p { margin: 0 0 var(--space-sm); }
 /* ---------- Sections ---------- */
 section { padding: var(--space-xl) 0; position: relative; }
 .section--tight { padding: var(--space-lg) 0; }
+.section--flush { padding: 0; }
 .section--blush { background: var(--blush-soft); }
 .section--blue { background: var(--dusty-blue); color: var(--white); }
 .section--blue h2, .section--blue h3 { color: var(--white); }
@@ -363,6 +364,34 @@ section { padding: var(--space-xl) 0; position: relative; }
 .section--wine-soft { background: var(--wine-soft); }
 .prose { max-width: 680px; }
 .prose--center { margin: 0 auto; text-align: center; }
+
+/* ---------- Photo moment (full-bleed image break) ---------- */
+.photo-moment {
+  min-height: 56vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.photo-moment::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(43,32,26,0.12) 0%, rgba(43,32,26,0.4) 100%);
+}
+.photo-moment__quote {
+  position: relative;
+  z-index: 1;
+  color: var(--white);
+  font-size: clamp(1.8rem, 4.2vw, 3.2rem);
+  text-align: center;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  max-width: 720px;
+  padding: 0 var(--space-md);
+  margin: 0;
+}
 
 /* ---------- Qualities list (home) ---------- */
 .qualities {
@@ -505,15 +534,16 @@ section { padding: var(--space-xl) 0; position: relative; }
 /* ---------- Photo strip (home) ---------- */
 .photo-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 4px;
 }
 @media (max-width: 780px) {
   .photo-strip { grid-template-columns: repeat(3, 1fr); gap: 3px; }
 }
 
-/* ---------- Instagram follow link ---------- */
-.instagram-follow {
+/* ---------- Text link (instagram follow, teaser CTAs) ---------- */
+.instagram-follow,
+.text-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -526,7 +556,9 @@ section { padding: var(--space-xl) 0; position: relative; }
   padding-bottom: 0.2rem;
   transition: color 0.2s ease, border-color 0.2s ease;
 }
-.instagram-follow:hover { color: var(--wine-dark); border-color: var(--wine-dark); }
+.instagram-follow:hover,
+.text-link:hover { color: var(--wine-dark); border-color: var(--wine-dark); }
+.text-link { margin-top: var(--space-sm); }
 
 /* ---------- Gallery categories ---------- */
 .gallery-category { margin-bottom: var(--space-lg); position: relative; z-index: 1; }
