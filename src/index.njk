@@ -37,6 +37,43 @@ eleventyComputed:
 
 <section class="section--blush">
   <div class="container">
+    <div class="split reveal">
+      <div>
+        <span class="eyebrow">{{ home.about_teaser.eyebrow }}</span>
+        <h2>{{ home.about_teaser.heading }}</h2>
+        <p>{{ home.about_teaser.paragraph }}</p>
+        <a class="text-link" href="{{ home.about_teaser.cta_url }}">{{ home.about_teaser.cta_label }}</a>
+      </div>
+      <img src="{{ home.about_teaser.image }}" alt="{{ home.about_teaser.image_alt }}" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="eyebrow reveal">{{ home.services_teaser.eyebrow }}</span>
+    <h2 class="reveal">{{ home.services_teaser.heading }}</h2>
+    <p class="reveal" style="max-width: 600px;">{{ home.services_teaser.intro }}</p>
+    <div class="services-grid">
+      {% for item in home.services_teaser.items %}
+      <div class="service-card reveal reveal--{{ loop.index }}">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.description }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-lg reveal">
+      <a class="btn" href="{{ home.services_teaser.cta_url }}">{{ home.services_teaser.cta_label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="photo-moment section--flush" style="background-image: url('{{ home.photo_moment.image }}');" role="img" aria-label="{{ home.photo_moment.image_alt }}">
+  <p class="photo-moment__quote reveal script">{{ home.photo_moment.quote }}</p>
+</section>
+
+<section class="section--blush">
+  <div class="container">
     <span class="eyebrow reveal">How it works</span>
     <h2 class="reveal">From &ldquo;let&rsquo;s chat&rdquo; to &ldquo;I do&rdquo;</h2>
     <div class="process-steps">
