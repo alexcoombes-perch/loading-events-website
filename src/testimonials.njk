@@ -14,6 +14,7 @@ eleventyComputed:
       {% endfor %}
     </div>
 
+    {% if testimonials.testimonials and testimonials.testimonials.length %}
     <div class="testimonial-grid">
       {% for t in testimonials.testimonials %}
       <div class="testimonial-card reveal reveal--{{ loop.index }}">
@@ -23,6 +24,12 @@ eleventyComputed:
       </div>
       {% endfor %}
     </div>
+    {% elif testimonials.no_reviews %}
+    <div class="prose reveal" style="max-width: 580px; margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid rgba(107,17,82,0.12);">
+      <span class="eyebrow">{{ testimonials.no_reviews.heading }}</span>
+      <p>{{ testimonials.no_reviews.text }}</p>
+    </div>
+    {% endif %}
 
     {% if testimonials.cta_line %}
     <div class="text-center mt-lg reveal">
