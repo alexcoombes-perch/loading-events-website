@@ -11,6 +11,44 @@ qualities:
   - "Thoughtful in the details."
   - "Genuinely fun to work with."
 booking_note: "Now booking 2027 weddings, with a handful of 2026 dates still open."
+photo_strip:
+  - src: "/images/gallery/ceremony-03.jpg"
+    alt: "Bride and groom exchanging vows during the ceremony"
+  - src: "/images/gallery/details-01.jpg"
+    alt: "Wedding stationery and table detail styling"
+  - src: "/images/gallery/venue-highlights-05.jpg"
+    alt: "Guests celebrating during the wedding reception"
+  - src: "/images/gallery/sneak-peek-02.jpg"
+    alt: "Candid moment between the couple"
+  - src: "/images/gallery/bride-groom-01.jpg"
+    alt: "Bride and groom portrait"
+  - src: "/images/gallery/dinner-speeches-01.jpg"
+    alt: "Speeches during the wedding breakfast"
+about_teaser:
+  eyebrow: "Behind the scenes"
+  heading: "Hi, I'm the person behind Loading Events."
+  paragraph: "I started photographing weddings at sixteen, then spent years in hospitality learning how to keep a room calm when everything behind it is anything but. Now I bring both together: an eye for the details that matter, and the steady hands to make sure they actually happen."
+  image: "/images/gallery/sneak-peek-01.jpg"
+  image_alt: "Candid sneak peek moment from the day"
+  cta_label: "More about me"
+  cta_url: "/about/"
+services_teaser:
+  eyebrow: "What I offer"
+  heading: "Three ways I can help"
+  intro: "Every package starts with a conversation, not a contract."
+  items:
+    - name: "Wedding Coordination"
+      description: "I step in behind the scenes to manage timelines, suppliers, and last-minute curveballs, so you can just enjoy the day."
+    - name: "Creative Support & Planning"
+      description: "Honest input and a second pair of hands throughout planning, so every detail feels considered, not thrown together."
+    - name: "Content Creation"
+      description: "Real, candid footage of the moments that matter, captured while they're actually happening."
+  cta_label: "See all services"
+  cta_url: "/services/"
+photo_moment:
+  image: "/images/gallery/sneak-peek-04.jpg"
+  image_alt: "A spontaneous moment caught on the day"
+  quote: "the moments you didn't plan, but will never forget"
 process_steps:
   - number: "01"
     title: "We talk it through"
@@ -21,15 +59,6 @@ process_steps:
   - number: "03"
     title: "You actually enjoy your wedding"
     description: "On the day, I'm the one fielding questions, chasing the caterer, and fixing the small wobbles, so you're fully present for every moment of it."
-photo_strip:
-  - src: "/images/gallery/ceremony-03.jpg"
-    alt: "Bride and groom exchanging vows during the ceremony"
-  - src: "/images/gallery/details-01.jpg"
-    alt: "Wedding stationery and table detail styling"
-  - src: "/images/gallery/venue-highlights-05.jpg"
-    alt: "Guests celebrating during the wedding reception"
-  - src: "/images/gallery/sneak-peek-02.jpg"
-    alt: "Candid moment between the couple"
 closing_statement: |
   Every wedding I take on gets the same thing: full attention, straight answers, and someone who genuinely cares whether your day goes well, not just whether the timeline holds.
 
