@@ -2,7 +2,7 @@ page_title: "Contact | Loading Events."
 heading: "Let's Talk About Your Day"
 intro_paragraphs:
   - "Whether you know exactly what you need or just want to talk it through, I'd love to hear from you."
-  - "Fill in the form below or email directly. I read every enquiry myself and get back to you within a couple of days, usually sooner."
+  - "Fill in the form below, or send a message on Instagram. I read every enquiry myself and get back to you within a couple of days, usually sooner."
 form_action: "https://formspree.io/f/YOUR_FORM_ID"
 # Cloudflare Turnstile site key (safe to be public, this is what makes the spam-check widget appear below).
 # The matching secret key goes into Formspree's own dashboard under Form Settings > Spam Filtering, not here.
