@@ -59,6 +59,55 @@ content:
         label: "Three Short Lines"
         type: "text"
         list: true
+      - name: "booking_note"
+        label: "Booking Availability Note"
+        type: "text"
+      - name: "photo_strip"
+        label: "Photo Strip"
+        type: "object"
+        list: true
+        fields:
+          - { name: "src", label: "Photo", type: "image" }
+          - { name: "alt", label: "Description (for accessibility)", type: "text" }
+      - name: "about_teaser"
+        label: "About Teaser Section"
+        type: "object"
+        fields:
+          - { name: "heading", label: "Heading", type: "text" }
+          - { name: "paragraph", label: "Paragraph", type: "text" }
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
+          - { name: "cta_label", label: "Button Text", type: "text" }
+          - { name: "cta_url", label: "Button Link", type: "text" }
+      - name: "services_teaser"
+        label: "Services Teaser Section"
+        type: "object"
+        fields:
+          - { name: "intro", label: "Intro Text", type: "text" }
+          - name: "items"
+            label: "Service Items"
+            type: "object"
+            list: true
+            fields:
+              - { name: "name", label: "Service Name", type: "text" }
+              - { name: "description", label: "Description", type: "text" }
+          - { name: "cta_label", label: "Button Text", type: "text" }
+          - { name: "cta_url", label: "Button Link", type: "text" }
+      - name: "photo_moment"
+        label: "Full-Width Photo Moment"
+        type: "object"
+        fields:
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
+          - { name: "quote", label: "Overlay Quote", type: "text" }
+      - name: "process_steps"
+        label: "How It Works Steps"
+        type: "object"
+        list: true
+        fields:
+          - { name: "number", label: "Step Number", type: "text" }
+          - { name: "title", label: "Step Title", type: "text" }
+          - { name: "description", label: "Step Description", type: "text" }
       - name: "closing_statement"
         label: "Closing Statement"
         type: "rich-text"
@@ -239,6 +288,13 @@ content:
       - name: "closing_line"
         label: "Closing Line"
         type: "text"
+      - name: "categories"
+        label: "Filter Categories"
+        type: "object"
+        list: true
+        fields:
+          - { name: "key", label: "Key (no spaces, e.g. ceremony)", type: "text" }
+          - { name: "label", label: "Filter Button Label", type: "text" }
       - name: "images"
         label: "Photos"
         type: "object"
@@ -246,6 +302,7 @@ content:
         fields:
           - { name: "src", label: "Photo", type: "image" }
           - { name: "alt", label: "Description (for accessibility)", type: "text" }
+          - { name: "category", label: "Category Key (must match a Filter Category key)", type: "text" }
 
   - name: "testimonials"
     label: "Notes From My Couples Page"
@@ -274,7 +331,7 @@ content:
         list: true
         fields:
           - { name: "quote", label: "Quote", type: "rich-text" }
-          - { name: "names", label: "Couple's Names", type: "text" }
+          - { name: "names", label: "Attribution (couple's names, or e.g. 'Wedding at Limekiln')", type: "text" }
           - { name: "date", label: "Date", type: "text" }
       - name: "no_reviews"
         label: "No Reviews Yet Message (shown until Testimonials above are added)"
