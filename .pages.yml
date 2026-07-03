@@ -83,12 +83,44 @@ content:
       - name: "portrait_image"
         label: "Your Portrait Photo (optional)"
         type: "image"
-      - name: "paragraphs"
+      - name: "portrait_alt"
+        label: "Portrait Photo Description"
+        type: "text"
+      - name: "accent_image"
+        label: "Fallback Photo (shown until you add a portrait)"
+        type: "image"
+      - name: "accent_image_alt"
+        label: "Fallback Photo Description"
+        type: "text"
+      - name: "intro_paragraphs"
         label: "Story Paragraphs"
         type: "text"
         list: true
+      - name: "second_image"
+        label: "Second Photo"
+        type: "image"
+      - name: "second_image_alt"
+        label: "Second Photo Description"
+        type: "text"
+      - name: "second_paragraphs"
+        label: "More About You"
+        type: "text"
+        list: true
+      - name: "photo_moment"
+        label: "Full-Width Photo Moment"
+        type: "object"
+        fields:
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
+          - { name: "quote", label: "Overlay Quote", type: "text" }
       - name: "closing_line"
         label: "Closing Line"
+        type: "text"
+      - name: "cta_label"
+        label: "Button Text"
+        type: "text"
+      - name: "cta_url"
+        label: "Button Link"
         type: "text"
 
   - name: "approach"
@@ -102,6 +134,12 @@ content:
       - name: "heading"
         label: "Heading"
         type: "text"
+      - name: "accent_image"
+        label: "Top Photo"
+        type: "image"
+      - name: "accent_image_alt"
+        label: "Top Photo Description"
+        type: "text"
       - name: "intro_paragraphs"
         label: "Intro Paragraphs"
         type: "text"
@@ -112,9 +150,18 @@ content:
         list: true
         fields:
           - { name: "heading", label: "Section Heading", type: "text" }
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
           - { name: "paragraphs", label: "Paragraphs", type: "text", list: true }
           - { name: "list_intro", label: "List Intro (optional)", type: "text" }
           - { name: "list", label: "List Items (optional)", type: "text", list: true }
+      - name: "photo_moment"
+        label: "Full-Width Photo Moment"
+        type: "object"
+        fields:
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
+          - { name: "quote", label: "Overlay Quote", type: "text" }
       - name: "closing"
         label: "Closing Section"
         type: "object"
