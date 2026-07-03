@@ -8,16 +8,22 @@ intro_paragraphs:
   - "Because the best weddings aren't perfect on paper. They're perfect in feeling."
 sections:
   - heading: "Calm, considered, creatively led"
+    image: "/images/gallery/couple-portraits-02.jpg"
+    image_alt: "Couple portrait in natural daylight"
     paragraphs:
       - "Weddings work best when they feel calm behind the scenes and completely natural in experience."
       - "My approach is built around exactly that balance: structure where it's needed, creativity where it matters, and a steady, reassuring presence throughout the whole process."
       - "Every couple is different, and every wedding should reflect that. I start by understanding what matters most to you, how you want the day to feel, and how that translates into something effortless, joyful, and entirely yours."
   - heading: "Designed around experience"
+    image: "/images/gallery/venue-highlights-03.jpg"
+    image_alt: "Venue detail and decor"
     paragraphs:
       - "A wedding is never just a list of timings, suppliers, and details. It's an atmosphere. A rhythm. A series of moments that build into something bigger than the sum of its parts."
       - "I focus on the guest experience as much as yours: how the day flows, how people feel within it, and how the energy naturally builds from start to finish. It's usually the small, unnoticed details that shape this most."
       - "The aim is always the same: to give you the space to actually be in your own day, rather than running it."
   - heading: "For couples who love the details (and the dance floor)"
+    image: "/images/gallery/dinner-speeches-02.jpg"
+    image_alt: "Guests laughing during speeches"
     paragraphs:
       - "The couples I work best with are fun, chatty, detail-aware, and genuinely invested in how their guests experience the day."
       - "They care about how everything comes together, but also want to let go, trust the process, and actually enjoy it once it arrives."
@@ -27,6 +33,10 @@ sections:
       - "the details feel thoughtful but never overdone"
       - "the energy builds naturally throughout the day"
       - "and the dance floor says everything that words can't"
+photo_moment:
+  image: "/images/gallery/sneak-peek-05.jpg"
+  image_alt: "Candid wedding day moment"
+  quote: "perfect in feeling, not just on paper"
 closing:
   heading: "The Intention"
   paragraphs:

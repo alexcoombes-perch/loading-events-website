@@ -1,18 +1,25 @@
 page_title: "About | Loading Events."
 heading: "About"
-# Add a portrait of yourself here once you have one — until then the page reads fine with text only.
+# Add a portrait of yourself here once you have one — until then the page reads fine with the accent images.
 portrait_image: ""
 portrait_alt: "Portrait photo"
 accent_image: "/images/gallery/couple-portraits-01.jpg"
 accent_image_alt: "Couple sharing a quiet moment together"
-paragraphs:
+intro_paragraphs:
   - "A love for weddings has been there for as long as I can remember."
   - "I started young, photographing my first wedding at sixteen after studying photography. What began as a focus on images quickly became something bigger. I've always been drawn to people, to the way they connect, and to the quiet, in-between moments that end up mattering most."
   - "From there I moved into hospitality: years spent learning how to make guests feel looked after, how to stay calm when things go sideways, and how to keep dozens of moving parts running behind a day that looks effortless from the outside."
   - "That experience now comes together as wedding coordination and creative direction. I'm the person holding the plan, briefing the suppliers, and quietly fixing the small fires, so you get a day that feels calm, considered, and completely yours."
+second_image: "/images/gallery/ceremony-02.jpg"
+second_image_alt: "Guests watching the ceremony"
+second_paragraphs:
   - "Outside of weddings you'll find me in a pottery studio, growing flowers for next season, or by the coast with a coffee. I've got a soft spot for warm light, pastel tones, and a slightly unreasonable love of sausage dogs."
   - "Good food, proper travel, and slow mornings are non-negotiable."
   - "On a wedding day it's always the in-between moments that stay with me: the glance right before the ceremony, the exhale once the formalities are done, the way the whole room shifts once the dancing starts."
+photo_moment:
+  image: "/images/gallery/couple-portraits-03.jpg"
+  image_alt: "Couple walking together after the ceremony"
+  quote: "the quiet moments no one else sees"
 closing_line: "Because while detail shapes the day, it's memory that carries it forward."
 cta_label: "Let's Talk About Your Day"
 cta_url: "/contact/"
