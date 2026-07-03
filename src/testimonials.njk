@@ -14,6 +14,12 @@ eleventyComputed:
       {% endfor %}
     </div>
 
+    {% if testimonials.accent_image %}
+    <div class="reveal" style="max-width: 480px; margin: var(--space-lg) 0;">
+      <img src="{{ testimonials.accent_image }}" alt="{{ testimonials.accent_image_alt }}" style="border-radius: 14px; width: 100%; object-fit: cover; box-shadow: var(--shadow-soft);" loading="lazy">
+    </div>
+    {% endif %}
+
     {% if testimonials.testimonials and testimonials.testimonials.length %}
     <div class="testimonial-grid">
       {% for t in testimonials.testimonials %}

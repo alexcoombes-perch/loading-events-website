@@ -31,6 +31,12 @@ eleventyComputed:
 </div>
 {% endif %}
 
+{% if services.photo_moment %}
+<section class="photo-moment section--flush" style="background-image: url('{{ services.photo_moment.image }}');" role="img" aria-label="{{ services.photo_moment.image_alt }}">
+  <p class="photo-moment__quote reveal script">{{ services.photo_moment.quote }}</p>
+</section>
+{% endif %}
+
 {% if services.faq %}
 <section class="section--tight">
   <div class="container reveal">
