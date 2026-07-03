@@ -180,6 +180,12 @@ content:
       - name: "heading"
         label: "Heading"
         type: "text"
+      - name: "accent_image"
+        label: "Top Photo"
+        type: "image"
+      - name: "accent_image_alt"
+        label: "Top Photo Description"
+        type: "text"
       - name: "intro_paragraphs"
         label: "Intro Paragraphs"
         type: "text"
@@ -191,6 +197,20 @@ content:
         fields:
           - { name: "name", label: "Service Name", type: "text" }
           - { name: "description", label: "Description", type: "rich-text" }
+      - name: "photo_moment"
+        label: "Full-Width Photo Moment"
+        type: "object"
+        fields:
+          - { name: "image", label: "Photo", type: "image" }
+          - { name: "image_alt", label: "Photo Description", type: "text" }
+          - { name: "quote", label: "Overlay Quote", type: "text" }
+      - name: "faq"
+        label: "FAQ"
+        type: "object"
+        list: true
+        fields:
+          - { name: "question", label: "Question", type: "text" }
+          - { name: "answer", label: "Answer", type: "rich-text" }
       - name: "closing_line"
         label: "Closing Line"
         type: "text"
@@ -242,6 +262,12 @@ content:
         label: "Intro Paragraphs"
         type: "text"
         list: true
+      - name: "accent_image"
+        label: "Photo"
+        type: "image"
+      - name: "accent_image_alt"
+        label: "Photo Description"
+        type: "text"
       - name: "testimonials"
         label: "Testimonials"
         type: "object"
@@ -250,6 +276,21 @@ content:
           - { name: "quote", label: "Quote", type: "rich-text" }
           - { name: "names", label: "Couple's Names", type: "text" }
           - { name: "date", label: "Date", type: "text" }
+      - name: "no_reviews"
+        label: "No Reviews Yet Message (shown until Testimonials above are added)"
+        type: "object"
+        fields:
+          - { name: "heading", label: "Heading", type: "text" }
+          - { name: "text", label: "Text", type: "text" }
+      - name: "cta_line"
+        label: "Closing Line"
+        type: "text"
+      - name: "cta_label"
+        label: "Button Text"
+        type: "text"
+      - name: "cta_url"
+        label: "Button Link"
+        type: "text"
 
   - name: "contact"
     label: "Contact Page"
