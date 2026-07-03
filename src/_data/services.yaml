@@ -12,6 +12,10 @@ services:
     description: "Need guidance, advice, or help bringing your ideas together? I'll work alongside you throughout planning to refine your vision, offer honest practical input, and make sure every detail feels considered and cohesive rather than thrown together."
   - name: "Content Creation"
     description: "The candid moments. The nerves before the ceremony. The hugs, happy tears, and dance floor chaos. My content creation service captures what happens behind the scenes, so you get beautifully real footage to relive and share long after the day is over."
+photo_moment:
+  image: "/images/gallery/details-06.jpg"
+  image_alt: "Table centrepiece detail styled for the reception"
+  quote: "the details you'll never have to think about"
 faq:
   - question: "How far out should I book?"
     answer: "Most couples book coordination six to twelve months ahead, but I've also stepped in with a few weeks' notice when someone's needed a lifeline. If your date's coming up fast, get in touch and I'll tell you straight whether it's workable."
