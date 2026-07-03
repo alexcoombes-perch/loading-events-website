@@ -8,7 +8,7 @@
   --dusty-blue: #8CA3C6;
   --dusty-blue-dark: #6c86a8;
   --dusty-blue-soft: #eef2f7;
-  --cream: #FBF0C6;
+  --cream: #F7F2E6;
   --wine: #6B1152;
   --wine-dark: #500d3d;
   --wine-soft: #f4e9ef;
@@ -116,7 +116,7 @@ p { margin: 0 0 var(--space-sm); }
 
 /* ---------- Header / Nav ---------- */
 .site-header {
-  background: rgba(251, 240, 198, 0.86);
+  background: rgba(247, 242, 230, 0.88);
   backdrop-filter: blur(14px) saturate(1.2);
   -webkit-backdrop-filter: blur(14px) saturate(1.2);
   border-bottom: 1px solid rgba(107, 17, 82, 0.1);
