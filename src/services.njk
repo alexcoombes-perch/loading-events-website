@@ -6,7 +6,6 @@ eleventyComputed:
 ---
 <section class="section--tight">
   <div class="container">
-    <span class="eyebrow">What I offer</span>
     <h1>{{ services.heading }}</h1>
     <div class="prose">
       {% for para in services.intro_paragraphs %}
@@ -40,7 +39,6 @@ eleventyComputed:
 {% if services.faq %}
 <section class="section--tight">
   <div class="container reveal">
-    <span class="eyebrow">Good to know</span>
     <h2>A few questions couples ask</h2>
     <div class="faq-list">
       {% for item in services.faq %}

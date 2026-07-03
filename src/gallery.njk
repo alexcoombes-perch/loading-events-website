@@ -6,7 +6,6 @@ eleventyComputed:
 ---
 <section class="section--tight">
   <div class="container reveal">
-    <span class="eyebrow">Real weddings</span>
     <h1>{{ gallery.heading }}</h1>
     <div class="prose">
       {% for para in gallery.intro_paragraphs %}
@@ -26,18 +25,13 @@ eleventyComputed:
       {% endfor %}
     </div>
 
-    {% for cat in gallery.categories %}
-    <div class="gallery-category" data-category="{{ cat.key }}">
-      <h2>{{ cat.label }}</h2>
-      <div class="gallery-grid">
-        {% for image in cat.images %}
-        <a href="{{ image.src }}" target="_blank" rel="noopener">
-          <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
-        </a>
-        {% endfor %}
-      </div>
+    <div class="gallery-grid">
+      {% for image in gallery.images %}
+      <a href="{{ image.src }}" target="_blank" rel="noopener" data-category="{{ image.category }}">
+        <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
+      </a>
+      {% endfor %}
     </div>
-    {% endfor %}
 
     <p class="text-center mt-lg" style="font-style: italic; color: var(--ink-soft);">{{ gallery.closing_line }}</p>
   </div>
@@ -46,15 +40,15 @@ eleventyComputed:
 <script>
   (function () {
     var buttons = document.querySelectorAll('#galleryFilter button');
-    var groups = document.querySelectorAll('.gallery-category');
+    var tiles = document.querySelectorAll('.gallery-grid a');
     buttons.forEach(function (btn) {
       btn.addEventListener('click', function () {
         buttons.forEach(function (b) { b.classList.remove('is-active'); });
         btn.classList.add('is-active');
         var filter = btn.getAttribute('data-filter');
-        groups.forEach(function (group) {
-          var show = filter === 'all' || group.getAttribute('data-category') === filter;
-          group.style.display = show ? '' : 'none';
+        tiles.forEach(function (tile) {
+          var show = filter === 'all' || tile.getAttribute('data-category') === filter;
+          tile.style.display = show ? '' : 'none';
         });
       });
     });

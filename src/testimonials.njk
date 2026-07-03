@@ -6,7 +6,6 @@ eleventyComputed:
 ---
 <section class="section--tight">
   <div class="container">
-    <span class="eyebrow">Kind words</span>
     <h1>{{ testimonials.heading }}</h1>
     <div class="prose">
       {% for para in testimonials.intro_paragraphs %}
@@ -26,13 +25,13 @@ eleventyComputed:
       <div class="testimonial-card reveal reveal--{{ loop.index }}">
         <p>{{ t.quote }}</p>
         <p class="names">{{ t.names }}</p>
-        <p style="color: var(--ink-soft); font-size: 0.85rem;">{{ t.date }}</p>
+        {% if t.date %}<p style="color: var(--ink-soft); font-size: 0.85rem;">{{ t.date }}</p>{% endif %}
       </div>
       {% endfor %}
     </div>
     {% elif testimonials.no_reviews %}
     <div class="prose reveal" style="max-width: 580px; margin-top: var(--space-lg); padding-top: var(--space-lg); border-top: 1px solid rgba(107,17,82,0.12);">
-      <span class="eyebrow">{{ testimonials.no_reviews.heading }}</span>
+      <p style="font-weight: 600; color: var(--wine); margin-bottom: 0.4rem;">{{ testimonials.no_reviews.heading }}</p>
       <p>{{ testimonials.no_reviews.text }}</p>
     </div>
     {% endif %}

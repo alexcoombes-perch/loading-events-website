@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#FBF0C6"/>
-  <text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="500" fill="#8CA3C6" text-anchor="middle">le.</text>
+  <rect width="64" height="64" rx="14" fill="#F7F2E6"/>
+  <text x="32" y="43" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="500" text-anchor="middle"><tspan fill="#6c86a8">l</tspan><tspan fill="#6B1152">e.</tspan></text>
 </svg>
