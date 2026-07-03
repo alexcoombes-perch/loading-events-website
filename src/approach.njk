@@ -17,15 +17,15 @@ eleventyComputed:
 </section>
 
 {% if approach.accent_image %}
-<div class="container">
-  <img src="{{ approach.accent_image }}" alt="{{ approach.accent_image_alt }}" style="border-radius: 8px; max-height: 480px; width: 100%; object-fit: cover;">
+<div class="container reveal">
+  <img src="{{ approach.accent_image }}" alt="{{ approach.accent_image_alt }}" style="border-radius: 14px; max-height: 480px; width: 100%; object-fit: cover; box-shadow: var(--shadow-soft);">
 </div>
 {% endif %}
 
 <section>
   <div class="container">
     {% for block in approach.sections %}
-    <div class="approach-block">
+    <div class="approach-block reveal reveal--{{ loop.index }}">
       <h2>{{ block.heading }}</h2>
       <div class="prose">
         {% for para in block.paragraphs %}
@@ -46,7 +46,8 @@ eleventyComputed:
 </section>
 
 <section class="section--wine">
-  <div class="container prose--center" style="max-width: 700px;">
+  <span class="watermark" style="top: -6%; left: -3%;">feeling</span>
+  <div class="container prose--center reveal" style="max-width: 700px;">
     <h2>{{ approach.closing.heading }}</h2>
     {% for para in approach.closing.paragraphs %}
     <p>{{ para }}</p>

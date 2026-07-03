@@ -11,17 +11,18 @@ eleventyComputed:
     {{ home.hero_intro | paragraphs | safe }}
     <a class="btn" href="{{ home.cta_url }}">{{ home.cta_label }}</a>
   </div>
+  <span class="hero__scroll-cue"></span>
 </section>
 
 <section class="section--tight">
   <div class="container">
-    <ul class="qualities">
+    <ul class="qualities reveal">
       {% for q in home.qualities %}
       <li>{{ q }}</li>
       {% endfor %}
     </ul>
 
-    <div class="photo-strip">
+    <div class="photo-strip reveal reveal--1">
       {% for photo in home.photo_strip %}
       <a href="/gallery/">
         <img src="{{ photo.src }}" alt="{{ photo.alt }}" loading="lazy">
@@ -32,12 +33,13 @@ eleventyComputed:
 </section>
 
 <section class="section--blush">
+  <span class="watermark" style="top: 10%; left: -2%;">together</span>
   <div class="container">
-    <span class="eyebrow">How it works</span>
-    <h2>From "let's chat" to "I do"</h2>
+    <span class="eyebrow reveal">How it works</span>
+    <h2 class="reveal">From &ldquo;let&rsquo;s chat&rdquo; to &ldquo;I do&rdquo;</h2>
     <div class="process-steps">
       {% for step in home.process_steps %}
-      <div class="process-step">
+      <div class="process-step reveal reveal--{{ loop.index }}">
         <span class="process-step__num">{{ step.number }}</span>
         <h3>{{ step.title }}</h3>
         <p>{{ step.description }}</p>
@@ -48,7 +50,8 @@ eleventyComputed:
 </section>
 
 <section class="section--wine text-center">
-  <div class="container">
+  <span class="watermark" style="bottom: -8%; right: -2%;">cheers</span>
+  <div class="container reveal">
     <span class="booking-note">{{ home.booking_note }}</span>
     <p class="prose prose--center" style="max-width: 760px; font-size: 1.15rem;">{{ home.closing_statement }}</p>
     <div class="text-center mt-lg">

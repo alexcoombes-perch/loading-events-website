@@ -16,8 +16,8 @@ eleventyComputed:
 
     <div class="testimonial-grid">
       {% for t in testimonials.testimonials %}
-      <div class="testimonial-card">
-        <p>&ldquo;{{ t.quote }}&rdquo;</p>
+      <div class="testimonial-card reveal reveal--{{ loop.index }}">
+        <p>{{ t.quote }}</p>
         <p class="names">{{ t.names }}</p>
         <p style="color: var(--ink-soft); font-size: 0.85rem;">{{ t.date }}</p>
       </div>
@@ -25,8 +25,8 @@ eleventyComputed:
     </div>
 
     {% if testimonials.cta_line %}
-    <div class="text-center mt-lg">
-      <p class="script" style="font-size: 1.4rem;">{{ testimonials.cta_line }}</p>
+    <div class="text-center mt-lg reveal">
+      <p class="script" style="font-size: 1.7rem;">{{ testimonials.cta_line }}</p>
       <a class="btn" href="{{ testimonials.cta_url }}">{{ testimonials.cta_label }}</a>
     </div>
     {% endif %}

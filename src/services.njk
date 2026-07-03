@@ -16,7 +16,7 @@ eleventyComputed:
 
     <div class="services-grid">
       {% for item in services.services %}
-      <div class="service-card">
+      <div class="service-card reveal reveal--{{ loop.index }}">
         <h3>{{ item.name }}</h3>
         <p>{{ item.description }}</p>
       </div>
@@ -26,14 +26,14 @@ eleventyComputed:
 </section>
 
 {% if services.accent_image %}
-<div class="container">
-  <img src="{{ services.accent_image }}" alt="{{ services.accent_image_alt }}" style="border-radius: 8px; max-height: 480px; width: 100%; object-fit: cover;">
+<div class="container reveal">
+  <img src="{{ services.accent_image }}" alt="{{ services.accent_image_alt }}" style="border-radius: 14px; max-height: 480px; width: 100%; object-fit: cover; box-shadow: var(--shadow-soft);">
 </div>
 {% endif %}
 
 {% if services.faq %}
 <section class="section--tight">
-  <div class="container">
+  <div class="container reveal">
     <span class="eyebrow">Good to know</span>
     <h2>A few questions couples ask</h2>
     <div class="faq-list">
@@ -49,8 +49,9 @@ eleventyComputed:
 {% endif %}
 
 <section class="section--blue text-center">
-  <div class="container">
-    <p class="script" style="font-size: 1.6rem; color: var(--white);">{{ services.closing_line }}</p>
+  <span class="watermark" style="bottom: -10%; left: -2%;">joy</span>
+  <div class="container reveal">
+    <p class="script" style="font-size: 1.9rem; color: var(--white);">{{ services.closing_line }}</p>
     <a class="btn btn--outline" href="{{ services.cta_url }}">{{ services.cta_label }}</a>
   </div>
 </section>

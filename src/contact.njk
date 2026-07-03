@@ -14,7 +14,7 @@ eleventyComputed:
       {% endfor %}
     </div>
 
-    <form class="contact-form" action="{{ contact.form_action }}" method="POST">
+    <form class="contact-form reveal" action="{{ contact.form_action }}" method="POST">
       {% for field in contact.form_fields %}
       <div class="form-field">
         <label for="{{ field.name }}">{{ field.label }}{% if field.required %} *{% endif %}</label>
