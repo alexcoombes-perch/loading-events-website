@@ -288,13 +288,6 @@ content:
       - name: "closing_line"
         label: "Closing Line"
         type: "text"
-      - name: "categories"
-        label: "Filter Categories"
-        type: "object"
-        list: true
-        fields:
-          - { name: "key", label: "Key (no spaces, e.g. ceremony)", type: "text" }
-          - { name: "label", label: "Filter Button Label", type: "text" }
       - name: "images"
         label: "Photos"
         type: "object"
@@ -302,7 +295,6 @@ content:
         fields:
           - { name: "src", label: "Photo", type: "image" }
           - { name: "alt", label: "Description (for accessibility)", type: "text" }
-          - { name: "category", label: "Category Key (must match a Filter Category key)", type: "text" }
 
   - name: "testimonials"
     label: "Notes From My Couples Page"
