@@ -18,16 +18,9 @@ eleventyComputed:
 
 <section class="section--tight" style="padding-top: 0;">
   <div class="container">
-    <div class="gallery-filter" id="galleryFilter">
-      <button type="button" class="is-active" data-filter="all">All</button>
-      {% for cat in gallery.categories %}
-      <button type="button" data-filter="{{ cat.key }}">{{ cat.label }}</button>
-      {% endfor %}
-    </div>
-
     <div class="gallery-grid">
       {% for image in gallery.images %}
-      <a href="{{ image.src }}" target="_blank" rel="noopener" data-category="{{ image.category }}">
+      <a href="{{ image.src }}" target="_blank" rel="noopener">
         <img src="{{ image.src }}" alt="{{ image.alt }}" loading="lazy">
       </a>
       {% endfor %}
@@ -36,21 +29,3 @@ eleventyComputed:
     <p class="text-center mt-lg" style="font-style: italic; color: var(--ink-soft);">{{ gallery.closing_line }}</p>
   </div>
 </section>
-
-<script>
-  (function () {
-    var buttons = document.querySelectorAll('#galleryFilter button');
-    var tiles = document.querySelectorAll('.gallery-grid a');
-    buttons.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        buttons.forEach(function (b) { b.classList.remove('is-active'); });
-        btn.classList.add('is-active');
-        var filter = btn.getAttribute('data-filter');
-        tiles.forEach(function (tile) {
-          var show = filter === 'all' || tile.getAttribute('data-category') === filter;
-          tile.style.display = show ? '' : 'none';
-        });
-      });
-    });
-  })();
-</script>
