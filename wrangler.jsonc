@@ -4,11 +4,5 @@
   "assets": {
     "directory": "./dist"
   },
-  "workers_dev": false,
-  "routes": [
-    {
-      "pattern": "loadingevents.co.uk",
-      "custom_domain": true
-    }
-  ]
+  "workers_dev": false
 }
