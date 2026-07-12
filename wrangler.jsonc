@@ -7,7 +7,7 @@
   "workers_dev": false,
   "routes": [
     {
-      "pattern": "byislastudio.com",
+      "pattern": "loadingevents.co.uk",
       "custom_domain": true
     }
   ]
